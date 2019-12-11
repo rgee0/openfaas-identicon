@@ -1,0 +1,9 @@
+version: 1.0
+provider:
+  name: openfaas
+  gateway: http://127.0.0.1:8080
+functions:
+  identicon:
+    lang: go
+    handler: ./identicon
+    image: ${DOCKER_USER:-rgee0}/identicon:latest
